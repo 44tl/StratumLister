@@ -517,26 +517,32 @@ const loadContent = async (path, item = null) => {
     }
 };
 
-const renderMarkdown = (markdown, item = null) => {
-    const rendererUnavailable = typeof marked === 'undefined' || typeof DOMPurify === 'undefined';
-    const rawHtml = rendererUnavailable
-        ? `<pre><code>${escapeHtml(markdown)}</code></pre>`
-        : marked.parse(markdown);
-    const cleanHtml = rendererUnavailable
-        ? rawHtml
-        : DOMPurify.sanitize(rawHtml, { ADD_ATTR: ['class'] });
-    contentArea.innerHTML = `<div class="markdown-body">${cleanHtml}</div>`;
-    const markdownBody = contentArea.querySelector('.markdown-body');
+ const renderMarkdown = (markdown, item = null) => {
+     const rendererUnavailable = typeof marked === 'undefined' || typeof DOMPurify === 'undefined';
+     const rawHtml = rendererUnavailable
+         ? `<pre><code>${escapeHtml(markdown)}</code></pre>`
+         : marked.parse(markdown);
+     const cleanHtml = rendererUnavailable
+         ? rawHtml
+         : DOMPurify.sanitize(rawHtml, { ADD_ATTR: ['class'] });
+     contentArea.innerHTML = `<div class="markdown-body">${cleanHtml}</div>`;
+     const markdownBody = contentArea.querySelector('.markdown-body');
 
-    injectPageMetadata(item);
-    linkifyPlainText(markdownBody);
-    prepareExternalLinks();
+     injectPageMetadata(item);
+     linkifyPlainText(markdownBody);
+     prepareExternalLinks();
 
-    if (typeof hljs !== 'undefined') {
-        contentArea.querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightElement(block);
-        });
-    }
+     // Lazy load images for better performance
+     markdownBody.querySelectorAll('img:not([loading])').forEach(img => {
+         img.loading = 'lazy';
+         img.decoding = 'async';
+     });
+
+     if (typeof hljs !== 'undefined') {
+         contentArea.querySelectorAll('pre code').forEach((block) => {
+             hljs.highlightElement(block);
+         });
+     }
 
     contentArea.querySelectorAll('pre').forEach(pre => {
         if (pre.querySelector('.copy-button')) return;
@@ -975,12 +981,7 @@ const fetchContributors = async () => {
     let nextUrl = CONTRIBUTORS_API_URL;
 
     while (nextUrl) {
-        const response = await fetch(nextUrl, {
-            cache: 'no-store',
-            headers: {
-                Accept: 'application/vnd.github+json'
-            }
-        });
+        const response = await fetch(nextUrl);
 
         if (!response.ok) {
             throw new Error('Unable to load contributors');
@@ -1002,10 +1003,6 @@ const fetchContributors = async () => {
     }
 
     return Array.from(contributorsByLogin.values()).sort((a, b) => {
-        const aIsOwner = String(a.login ?? '').toLowerCase() === CONTRIBUTORS_OWNER;
-        const bIsOwner = String(b.login ?? '').toLowerCase() === CONTRIBUTORS_OWNER;
-
-        if (aIsOwner !== bIsOwner) return aIsOwner ? -1 : 1;
         return (Number(b.contributions) || 0) - (Number(a.contributions) || 0);
     });
 };
