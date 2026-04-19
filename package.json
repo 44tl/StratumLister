@@ -1,0 +1,11 @@
+{
+  "name": "stratum",
+  "version": "1.0.0",
+  "description": "Premium Docs Template",
+  "scripts": {
+    "dev": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
