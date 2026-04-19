@@ -2,6 +2,26 @@
 
 <div class="changelog-timeline">
 
+<div class="changelog-item">
+<div class="changelog-header">
+<span class="changelog-version-tag">v1.0.1</span>
+<span class="changelog-date">April 20, 2026</span>
+</div>
+<div class="changelog-content">
+
+### Design & UX Overhaul
+
+- **Custom Icon System**: Replaced all emoji with a proprietary SVG icon set for consistent, sharp visuals across all pages
+- **Smoother Animations**: Refined entrance transitions with improved easing and timing for a polished feel
+- **Enhanced Markdown Engine**: Integrated marked.js for proper Markdown parsing with full codeblock support
+- **Syntax Highlighting**: Added highlight.js with GitHub Dark theme and copy-to-clipboard functionality on all code blocks
+- **Typography Improvements**: Increased line-height to 1.75 and adjusted font scales for better readability
+- **Cleaner Footer**: Simplified footer with essential branding only
+- **Consistent Branding**: Complete transition to "Stratum Lister" identity throughout
+- **Streamlined Homepage**: Removed redundant Discord CTA from bottom of the Stratum Lister page (top action bar retained)
+
+</div>
+</div>
 
 <div class="changelog-item">
 <div class="changelog-header">

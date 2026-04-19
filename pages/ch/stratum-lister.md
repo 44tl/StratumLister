@@ -44,10 +44,4 @@ Stratum Lister is a living knowledge base maintained by the community. We're alw
 **Spotted a mistake or want to add a guide?**
 Contributing is simple: fork the repository, follow our editorial standards (no AI content, verified sources), and submit a pull request. Or, join our Discord to discuss new tools and system optimizations with the community.
 
-<p class="lister-license-note">MIT Licensed - fork, copy, and submit pull requests freely. Just keep the no-AI rule and attribution when reusing content.</p>
-
-<div style="text-align: center; margin-top: 32px;">
-    <a href="https://discord.gg/VAu5PWkNdK" class="discord-cta" target="_blank" rel="noopener noreferrer">
-        Join our Discord community
-    </a>
-</div>
+ <p class="lister-license-note">MIT Licensed - fork, copy, and submit pull requests freely. Just keep the no-AI rule and attribution when reusing content.</p>
