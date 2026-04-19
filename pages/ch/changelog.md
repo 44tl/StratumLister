@@ -4,8 +4,46 @@
 
 <div class="changelog-item">
 <div class="changelog-header">
+<span class="changelog-version-tag">v1.0.3</span>
+<span class="changelog-date">April 20</span>
+</div>
+<div class="changelog-content">
+
+### Platform Guides & Navigation Polish
+
+- Added dedicated Android guides for device choice, setup, app sideloading, security, backups, ADB cleanup, rooting, custom ROMs, and maintenance.
+- Added dedicated iOS guides for device choice, setup, app installs, privacy and security, backups, jailbreaking, package managers, tips, and maintenance.
+- Added dedicated macOS guides for device choice, setup, apps and package managers, security, backups, Terminal and Homebrew, performance, advanced tweaks, and maintenance.
+- Improved the guide navigator so long category lists can scroll horizontally and the active category remains reachable.
+- Hid global scrollbars for a cleaner layout while keeping code block scrollbars visible.
+- Fixed rounded code blocks so horizontal scrollbars stay inside the code block instead of bleeding past the rounded corners.
+- Removed the theme switcher and kept the interface on the single dark visual style.
+- Added quick topbar shortcuts for Important, FAQ, and Changelog next to the GitHub shortcut.
+- Cleaned dated wording from user-facing pages so evergreen guides read less like temporary release notes.
+
+</div>
+</div>
+
+<div class="changelog-item">
+<div class="changelog-header">
+<span class="changelog-version-tag">v1.0.2</span>
+<span class="changelog-date">April 20</span>
+</div>
+<div class="changelog-content">
+
+### Linux Content Expansion
+
+- Added a dedicated Linux navigation section with separated pages for distro choice, installation, package management, gaming, drivers, security, and maintenance.
+- Added current upstream version notes for Ubuntu, Debian, Mint, Fedora, Arch, openSUSE, kernel.org, Bazzite, Proton, Mesa, and NVIDIA driver caveats.
+- Linked Linux entry points from the Beginner Guide so the section is easier to find.
+
+</div>
+</div>
+
+<div class="changelog-item">
+<div class="changelog-header">
 <span class="changelog-version-tag">v1.0.1</span>
-<span class="changelog-date">April 20, 2026</span>
+<span class="changelog-date">April 20</span>
 </div>
 <div class="changelog-content">
 
@@ -17,8 +55,8 @@
 - **Syntax Highlighting**: Added highlight.js with GitHub Dark theme and copy-to-clipboard functionality on all code blocks
 - **Typography Improvements**: Increased line-height to 1.75 and adjusted font scales for better readability
 - **Cleaner Footer**: Simplified footer with essential branding only
-- **Consistent Branding**: Complete transition to "Stratum Lister" identity throughout
-- **Streamlined Homepage**: Removed redundant Discord CTA from bottom of the Stratum Lister page (top action bar retained)
+- **Consistent Branding**: Complete transition to "StratumLister" identity throughout
+- **Streamlined Homepage**: Removed redundant Discord CTA from bottom of the StratumLister page (top action bar retained)
 
 </div>
 </div>
@@ -26,7 +64,7 @@
 <div class="changelog-item">
 <div class="changelog-header">
 <span class="changelog-version-tag">v1.0.0</span>
-<span class="changelog-date">April 19, 2026</span>
+<span class="changelog-date">April 19</span>
 </div>
 <div class="changelog-content">
 
@@ -43,7 +81,7 @@ The platform has transitioned to a high-fidelity documentation interface focused
 <div class="changelog-item">
 <div class="changelog-header">
 <span class="changelog-version-tag">v0.9.0</span>
-<span class="changelog-date">April 19, 2026</span>
+<span class="changelog-date">April 19</span>
 </div>
 <div class="changelog-content">
 
@@ -52,7 +90,7 @@ Established the foundational technical standards and initial content repository.
 
 - **Maintainer Verification System**: Launched the Link Safety Index and the maintainer-only verification badge protocol.
 - **Safety Database**: Populated the "Avoid These Tools" and "Emergency Recovery" knowledge bases.
-- **Policy Framework**: Formally introduced the Human-Only (No-AI) content policy and localized privacy standards.
+- **Policy Framework**: Formally introduced the Human-Only content policy and localized privacy standards.
 - **Foundational Guides**: Published comprehensive audits for Windows Hardening, Browser Security, and Multimedia performance.
 
 </div>
@@ -61,7 +99,7 @@ Established the foundational technical standards and initial content repository.
 <div class="changelog-item">
 <div class="changelog-header">
 <span class="changelog-version-tag">v0.8.2</span>
-<span class="changelog-date">April 18, 2026</span>
+<span class="changelog-date">April 18</span>
 </div>
 <div class="changelog-content">
 
@@ -74,7 +112,7 @@ Complete codebase rewrite for improved maintainability and extensibility.
 <div class="changelog-item">
 <div class="changelog-header">
 <span class="changelog-version-tag">v0.8.1</span>
-<span class="changelog-date">March 23, 2026</span>
+<span class="changelog-date">March 23</span>
 </div>
 <div class="changelog-content">
 
@@ -87,7 +125,7 @@ Migrated hosting from GitBook to GitHub Pages for better control and performance
 <div class="changelog-item">
 <div class="changelog-header">
 <span class="changelog-version-tag">v0.8.0</span>
-<span class="changelog-date">February 12, 2026</span>
+<span class="changelog-date">February 12</span>
 </div>
 <div class="changelog-content">
 

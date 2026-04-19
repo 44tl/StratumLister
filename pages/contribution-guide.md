@@ -1,6 +1,6 @@
 # Contribution Guide
 
-Stratum Lister is a community-driven technical resource. We welcome contributions that improve the accuracy, safety, or usability of our documentation.
+StratumLister is a community-driven technical resource. We welcome contributions that improve the accuracy, safety, or usability of our documentation.
 
 ## What To Submit
 - **Security Audits**: Reports of hijacked, suspicious, or malicious external links.

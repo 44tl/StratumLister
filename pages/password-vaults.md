@@ -8,7 +8,7 @@ Massive credential leaks (16B+ in 2025, ongoing exploitation) make unique passwo
 
 ---
 
-## Core Requirements 2026
+## Core Requirements
 
 - AES-256-GCM or stronger zero-knowledge encryption
 - Independent security audits (published reports)
@@ -36,11 +36,11 @@ Families/org plans scale well
 
 Vaultwarden (Rust rewrite) for lightweight self-hosting
 
-Strong passkey support, enterprise features expanding (Access Intelligence 2026)
+Strong passkey support and expanding enterprise access governance features
 
 Native apps: Windows/macOS/Linux/iOS/Android + all browsers
 
-**Latest:** 2026.1.1 (Feb 2026) – Electron 39 Linux, encryption tweaks
+**Latest:** Recent desktop releases include runtime updates and encryption-related maintenance.
 
 **Why first choice:** Price-to-feature ratio unbeatable, transparent, no breaches, community + enterprise momentum.
 
@@ -56,11 +56,11 @@ Passkey-first focus, seamless autofill/biometrics
 
 Families ($60/yr), business plans strong
 
-Unified Access governance (2026 rollout) fights credential sprawl
+Unified Access governance helps fight credential sprawl
 
 Native Apple Watch + deep macOS/iOS integration
 
-25% off promos common (New Year 2026 deals active)
+Promos are common; check current pricing before paying full price.
 
 **Why pick:** Smoothest UX, best for Apple users, proactive security features justify $36–60/yr.
 
@@ -100,7 +100,7 @@ Solid alternative if you want Proton ecosystem.
 
 ### NordPass / Keeper / RoboForm – Premium Contenders
 
-**NordPass:** PCMag paid Editors' Choice 2026 – clean UI, business features
+**NordPass:** PCMag paid Editors' Choice – clean UI, business features
 
 **Keeper:** Enterprise-grade, zero-trust, high Gartner scores
 

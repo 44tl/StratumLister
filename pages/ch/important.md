@@ -3,7 +3,7 @@
 Read this mandatory safety notice before using any guide, tool, script, or download link provided in this documentation.
 
 ## Technical Accountability
-Stratum Lister is a community-driven technical resource. While we prioritize safety and accuracy, software environments are dynamic. **System optimization is your responsibility.**
+StratumLister is a community-driven technical resource. While we prioritize safety and accuracy, software environments are dynamic. **System optimization is your responsibility.**
 - **Version Awareness**: Confirm that a guide specifically applies to your current OS build (e.g., Windows 11 23H2) and hardware (AMD/Nvidia/Intel).
 - **Snapshot Requirement**: You must create a System Restore point or a full disk backup before applying any system-level changes.
 - **Source Verification**: Never run a command or script you have not manually inspected. "Blindly" running code is the most common cause of system instability.

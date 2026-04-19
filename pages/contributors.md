@@ -1,6 +1,6 @@
 # Contributors
 
-Stratum Lister is a collaborative effort. We rely on the technical expertise and vigilance of our community to maintain the highest standards of safety and accuracy.
+StratumLister is a collaborative effort. We rely on the technical expertise and vigilance of our community to maintain the highest standards of safety and accuracy.
 
 <section class="contributors-page">
     <p class="contributors-lead">This project is maintained by Atlas and community contributors who improve the platform through source-backed technical guidance, bug reports, and documentation refinements.</p>

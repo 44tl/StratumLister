@@ -16,6 +16,7 @@ Follow these five steps to ensure your optimization journey is safe and successf
 | Your Primary Goal | Recommended Start | What to Avoid |
 | :--- | :--- | :--- |
 | **Clean & Fast Windows** | [Safe Optimization Path](#safe-optimization-path) | Automated "Debloat" scripts |
+| **Move to Linux** | [Linux Overview](#linux-overview) & [Linux Install Checklist](#linux-install-checklist) | Random distro respins and unverified ISOs |
 | **Fix System Damage** | [Emergency Recovery Path](#emergency-recovery-path) | Stacking multiple "Repair" tools |
 | **Gaming Performance** | [Game Launcher Optimization](#game-launcher-optimization) | Kernel-level "FPS Boost" packs |
 | **Browser Privacy** | [Browser Hardening Guide](#browser-hardening-guide) | Extension over-saturation |

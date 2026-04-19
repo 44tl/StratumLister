@@ -2,7 +2,7 @@ const siteStructure = [
     {
         title: "Start Here",
         items: [
-            { id: "stratum-lister", label: "Stratum Lister", icon: "home", color: "#ffffff", path: "pages/ch/stratum-lister.md", tags: ["home", "about", "standards", "android", "ios", "mac", "linux", "windows"] },
+            { id: "stratum-lister", label: "StratumLister", icon: "home", color: "#ffffff", path: "pages/ch/stratum-lister.md", tags: ["home", "about", "standards", "android", "ios", "mac", "linux", "windows"] },
             { id: "important", label: "Important", icon: "alert-triangle", color: "#ffffff", path: "pages/ch/important.md", tags: ["safety", "policy", "verification"] },
             { id: "beginner-guide", label: "Beginner Guide", icon: "map", color: "#ffffff", path: "pages/beginner-guide.md", tags: ["start", "workflow", "guide"] },
             { id: "faq", label: "FAQ", icon: "help-circle", color: "#ffffff", path: "pages/ch/faq.md", tags: ["questions", "support"] },
@@ -37,7 +37,7 @@ const siteStructure = [
         ]
     },
     {
-        title: "Windows / Linux",
+        title: "Windows",
         items: [
             { id: "windows-optimization", label: "Windows Optimization", icon: "layout", color: "#ffffff", path: "pages/windows-optimization.md", tags: ["windows", "performance"] },
             { id: "win-10-11-optimization-faq", label: "Win 10/11 Optimization FAQ", icon: "help-circle", color: "#ffffff", path: "pages/win-10-11-optimization-faq.md", tags: ["windows", "faq"] },
@@ -45,6 +45,64 @@ const siteStructure = [
             { id: "free-up-space", label: "Free Up Space", icon: "trash-2", color: "#ffffff", path: "pages/free-up-space.md", tags: ["storage", "cleanup"] },
             { id: "custom-win-iso-knowledge", label: "Custom Win ISO Knowledge", icon: "book-open", color: "#ffffff", path: "pages/custom-win-iso-knowledge.md", tags: ["iso", "custom windows"] },
             { id: "windows-linux-iso-playbooks", label: "Windows/Linux ISO Playbooks", icon: "file-archive", color: "#ffffff", path: "pages/windows-linux-iso-playbooks.md", tags: ["iso", "linux", "windows"] }
+        ]
+    },
+    {
+        title: "Linux",
+        items: [
+            { id: "linux-overview", label: "Linux Overview", icon: "globe", color: "#ffffff", path: "pages/linux/overview.md", tags: ["linux", "current", "overview", "distros", "kernel"] },
+            { id: "linux-distro-picker", label: "Linux Distro Picker", icon: "route", color: "#ffffff", path: "pages/linux/distro-picker.md", tags: ["linux", "distros", "ubuntu", "debian", "fedora", "mint", "arch", "opensuse"] },
+            { id: "linux-install-checklist", label: "Linux Install Checklist", icon: "download", color: "#ffffff", path: "pages/linux/install-checklist.md", tags: ["linux", "install", "dual boot", "iso", "usb", "backup"] },
+            { id: "linux-package-management", label: "Linux Package Management", icon: "database", color: "#ffffff", path: "pages/linux/package-management.md", tags: ["linux", "apt", "dnf", "pacman", "zypper", "flatpak", "aur"] },
+            { id: "linux-gaming", label: "Linux Gaming", icon: "gamepad", color: "#ffffff", path: "pages/linux/gaming.md", tags: ["linux", "gaming", "steam", "proton", "bazzite", "mesa", "nvidia"] },
+            { id: "linux-drivers-hardware", label: "Linux Drivers & Hardware", icon: "cpu", color: "#ffffff", path: "pages/linux/drivers-hardware.md", tags: ["linux", "drivers", "hardware", "kernel", "mesa", "nvidia", "amd", "intel", "firmware"] },
+            { id: "linux-security-privacy", label: "Linux Security & Privacy", icon: "shield-check", color: "#ffffff", path: "pages/linux/security-privacy.md", tags: ["linux", "security", "privacy", "firewall", "ssh", "flatpak"] },
+            { id: "linux-maintenance", label: "Linux Maintenance", icon: "refresh-cw", color: "#ffffff", path: "pages/linux/maintenance.md", tags: ["linux", "maintenance", "updates", "snapshots", "rollback", "logs"] }
+        ]
+    },
+    {
+        title: "Android",
+        items: [
+            { id: "android-overview", label: "Android Overview", icon: "smartphone", color: "#ffffff", path: "pages/android/overview.md", tags: ["android", "current", "overview", "phones", "tablets"] },
+            { id: "android-device-picker", label: "Android Device Picker", icon: "route", color: "#ffffff", path: "pages/android/device-picker.md", tags: ["android", "buying", "updates", "pixel", "grapheneos", "lineageos"] },
+            { id: "android-setup-checklist", label: "Android Setup Checklist", icon: "download", color: "#ffffff", path: "pages/android/setup-checklist.md", tags: ["android", "setup", "backup", "security", "new phone"] },
+            { id: "android-apps-sideloading", label: "Android Apps & Sideloading", icon: "database", color: "#ffffff", path: "pages/android/apps-sideloading.md", tags: ["android", "apps", "apk", "sideloading", "play protect", "fdroid"] },
+            { id: "android-security-privacy", label: "Android Security & Privacy", icon: "shield-check", color: "#ffffff", path: "pages/android/security-privacy.md", tags: ["android", "security", "privacy", "permissions", "play protect"] },
+            { id: "android-backup-recovery", label: "Android Backup & Recovery", icon: "life-buoy", color: "#ffffff", path: "pages/android/backup-recovery.md", tags: ["android", "backup", "restore", "factory reset", "recovery"] },
+            { id: "android-debloat-adb", label: "Android Debloat & ADB", icon: "settings", color: "#ffffff", path: "pages/android/debloat-adb.md", tags: ["android", "adb", "debloat", "packages", "platform tools"] },
+            { id: "android-rooting-guide", label: "Android Rooting Guide", icon: "key", color: "#ffffff", path: "pages/android/rooting-guide.md", tags: ["android", "root", "magisk", "bootloader", "fastboot"] },
+            { id: "android-custom-roms", label: "Android Custom ROMs", icon: "cpu", color: "#ffffff", path: "pages/android/custom-roms.md", tags: ["android", "custom rom", "grapheneos", "lineageos", "verified boot"] },
+            { id: "android-maintenance", label: "Android Maintenance", icon: "refresh-cw", color: "#ffffff", path: "pages/android/maintenance.md", tags: ["android", "maintenance", "updates", "security patch", "battery", "storage"] }
+        ]
+    },
+    {
+        title: "iOS",
+        items: [
+            { id: "ios-overview", label: "iOS Overview", icon: "smartphone", color: "#ffffff", path: "pages/ios/overview.md", tags: ["ios", "iphone", "ipad", "current", "overview"] },
+            { id: "ios-device-picker", label: "iOS Device Picker", icon: "route", color: "#ffffff", path: "pages/ios/device-picker.md", tags: ["ios", "iphone", "ipad", "buying", "updates"] },
+            { id: "ios-setup-checklist", label: "iOS Setup Checklist", icon: "download", color: "#ffffff", path: "pages/ios/setup-checklist.md", tags: ["ios", "setup", "iphone", "backup", "security"] },
+            { id: "ios-apps-sideloading", label: "iOS Apps & Sideloading", icon: "database", color: "#ffffff", path: "pages/ios/apps-sideloading.md", tags: ["ios", "apps", "sideloading", "altstore", "testflight"] },
+            { id: "ios-security-privacy", label: "iOS Security & Privacy", icon: "shield-check", color: "#ffffff", path: "pages/ios/security-privacy.md", tags: ["ios", "security", "privacy", "lockdown mode", "stolen device protection"] },
+            { id: "ios-backup-recovery", label: "iOS Backup & Recovery", icon: "life-buoy", color: "#ffffff", path: "pages/ios/backup-recovery.md", tags: ["ios", "backup", "restore", "icloud", "encrypted backup"] },
+            { id: "ios-jailbreak-guide", label: "iOS Jailbreak Guide", icon: "key", color: "#ffffff", path: "pages/ios/jailbreak-guide.md", tags: ["ios", "jailbreak", "palera1n", "dopamine", "trollstore"] },
+            { id: "ios-tweaks-package-managers", label: "iOS Tweaks & Package Managers", icon: "settings", color: "#ffffff", path: "pages/ios/tweaks-package-managers.md", tags: ["ios", "jailbreak", "tweaks", "sileo", "zebra"] },
+            { id: "ios-tips-tricks", label: "iOS Tips & Tricks", icon: "book-open", color: "#ffffff", path: "pages/ios/tips-tricks.md", tags: ["ios", "tips", "shortcuts", "privacy", "iphone"] },
+            { id: "ios-maintenance", label: "iOS Maintenance", icon: "refresh-cw", color: "#ffffff", path: "pages/ios/maintenance.md", tags: ["ios", "maintenance", "updates", "battery", "storage"] }
+        ]
+    },
+    {
+        title: "macOS",
+        items: [
+            { id: "macos-overview", label: "macOS Overview", icon: "hard-drive", color: "#ffffff", path: "pages/macos/overview.md", tags: ["macos", "mac", "current", "overview", "tahoe"] },
+            { id: "macos-device-picker", label: "macOS Device Picker", icon: "route", color: "#ffffff", path: "pages/macos/device-picker.md", tags: ["macos", "mac", "buying", "apple silicon", "intel"] },
+            { id: "macos-setup-checklist", label: "macOS Setup Checklist", icon: "download", color: "#ffffff", path: "pages/macos/setup-checklist.md", tags: ["macos", "mac", "setup", "backup", "security"] },
+            { id: "macos-apps-package-managers", label: "macOS Apps & Package Managers", icon: "database", color: "#ffffff", path: "pages/macos/apps-package-managers.md", tags: ["macos", "mac", "apps", "homebrew", "macports", "app store"] },
+            { id: "macos-security-privacy", label: "macOS Security & Privacy", icon: "shield-check", color: "#ffffff", path: "pages/macos/security-privacy.md", tags: ["macos", "mac", "security", "privacy", "filevault", "gatekeeper", "sip"] },
+            { id: "macos-backup-recovery", label: "macOS Backup & Recovery", icon: "life-buoy", color: "#ffffff", path: "pages/macos/backup-recovery.md", tags: ["macos", "mac", "backup", "time machine", "recovery", "restore"] },
+            { id: "macos-terminal-homebrew", label: "macOS Terminal & Homebrew", icon: "settings", color: "#ffffff", path: "pages/macos/terminal-homebrew.md", tags: ["macos", "mac", "terminal", "zsh", "homebrew", "shell"] },
+            { id: "macos-performance-storage", label: "macOS Performance & Storage", icon: "cpu", color: "#ffffff", path: "pages/macos/performance-storage.md", tags: ["macos", "mac", "performance", "storage", "battery"] },
+            { id: "macos-advanced-tweaks", label: "macOS Advanced Tweaks", icon: "book-open", color: "#ffffff", path: "pages/macos/advanced-tweaks.md", tags: ["macos", "mac", "advanced", "defaults", "oclp", "virtualization"] },
+            { id: "macos-maintenance", label: "macOS Maintenance", icon: "refresh-cw", color: "#ffffff", path: "pages/macos/maintenance.md", tags: ["macos", "mac", "maintenance", "updates", "cleanup"] }
         ]
     },
     {
@@ -93,14 +151,14 @@ const CONTRIBUTORS_REPO_URL = 'https://github.com/44tl/StratumLister';
 const CONTRIBUTORS_API_URL = 'https://api.github.com/repos/44tl/StratumLister/contributors?per_page=100';
 
 const BOOKMARK_STORAGE_KEY = 'stratum-bookmarks';
+const RECENT_STORAGE_KEY = 'stratum-recent-pages';
 
 const sidebarNav = document.getElementById('sidebar-nav');
 const contentArea = document.getElementById('content-area');
 const breadcrumbs = document.getElementById('breadcrumbs');
-const themeToggle = document.getElementById('theme-toggle');
 const sidebar = document.getElementById('sidebar');
 const sidebarOverlay = document.getElementById('sidebar-overlay');
-const mobileToggle = document.getElementById('mobile-toggle');
+const navigatorToggle = document.getElementById('navigator-toggle');
 const searchToggle = document.getElementById('search-toggle');
 const bookmarkToggle = document.getElementById('bookmark-toggle');
 
@@ -111,6 +169,8 @@ let searchInput;
 let searchResults;
 let searchIndex = [];
 let searchIndexPromise = null;
+let navigatorFilters;
+let activeNavigatorGroup = 'all';
 
 const getAllPages = () => [
     ...siteStructure.flatMap(group => group.items.map(item => ({
@@ -119,6 +179,28 @@ const getAllPages = () => [
     }))),
     ...utilityPages
 ];
+
+const getGroupedPages = () => [
+    ...siteStructure.map(group => ({
+        title: group.title,
+        items: group.items.map(item => ({
+            ...item,
+            groupTitle: group.title
+        }))
+    })),
+    {
+        title: 'Legal',
+        items: utilityPages.map(item => ({
+            ...item,
+            groupTitle: item.groupTitle || 'Legal'
+        }))
+    }
+];
+
+const getFilteredPages = (pages) => {
+    if (activeNavigatorGroup === 'all') return pages;
+    return pages.filter(page => (page.groupTitle || 'Legal') === activeNavigatorGroup);
+};
 
 const checkPageAvailability = async () => {
     const checks = [];
@@ -149,10 +231,9 @@ const checkPageAvailability = async () => {
 
 const init = () => {
     renderSidebar();
-    setupTheme();
     setupGitHubLink();
     setupTopbarRoutes();
-    setupMobileNav();
+    setupNavigator();
     setupSearch();
     setupBookmarks();
     setupButtonEffects();
@@ -172,26 +253,23 @@ const init = () => {
     });
 };
 
-const setupMobileNav = () => {
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('open');
-            sidebarOverlay.classList.toggle('visible');
-        });
+const setupNavigator = () => {
+    if (navigatorToggle) {
+        navigatorToggle.addEventListener('click', () => openSearch('', { group: 'all' }));
     }
 
     if (sidebarOverlay) {
         sidebarOverlay.addEventListener('click', () => {
-            sidebar.classList.remove('open');
+            if (sidebar) sidebar.classList.remove('open');
             sidebarOverlay.classList.remove('visible');
         });
     }
 
-    // Auto-close sidebar on link click (for mobile)
+    if (!sidebarNav) return;
+
     sidebarNav.addEventListener('click', (e) => {
         if (window.innerWidth <= 768 && e.target.closest('.nav-link')) {
-            sidebar.classList.remove('open');
-            sidebarOverlay.classList.remove('visible');
+            closeMobileNav();
         }
     });
 };
@@ -202,6 +280,8 @@ const closeMobileNav = () => {
 };
 
 const renderSidebar = () => {
+    if (!sidebarNav) return;
+
     sidebarNav.innerHTML = '';
 
     siteStructure.forEach(group => {
@@ -253,6 +333,7 @@ const handleRouteChange = async () => {
     updateActiveLink(routeId);
     updateBreadcrumbs(itemInfo.group.title, itemInfo.item.label);
     updateBookmarkButton(routeId);
+    saveRecentPage(routeId);
     await loadContent(itemInfo.item.path, itemInfo.item);
 };
 
@@ -391,22 +472,6 @@ const createVerifiedIcon = () => {
     return icon;
 };
 
-const injectPageMetadata = (item) => {
-    if (!item || !item.reviewed) return;
-
-    const title = contentArea.querySelector('.markdown-body h1');
-    if (!title || title.nextElementSibling?.classList.contains('page-meta')) return;
-
-    const meta = document.createElement('div');
-    meta.className = 'page-meta';
-
-    const reviewed = document.createElement('span');
-    reviewed.textContent = `Last Updated: ${item.reviewed}`;
-
-    meta.append(reviewed);
-    title.insertAdjacentElement('afterend', meta);
-};
-
 const linkifyPlainText = (root) => {
     if (!root) return;
 
@@ -528,7 +593,6 @@ const loadContent = async (path, item = null) => {
      contentArea.innerHTML = `<div class="markdown-body">${cleanHtml}</div>`;
      const markdownBody = contentArea.querySelector('.markdown-body');
 
-     injectPageMetadata(item);
      linkifyPlainText(markdownBody);
      prepareExternalLinks();
 
@@ -651,6 +715,22 @@ const setupBookmarks = () => {
     updateBookmarkButton();
 };
 
+const getRecentPageIds = () => {
+    try {
+        const stored = JSON.parse(localStorage.getItem(RECENT_STORAGE_KEY) || '[]');
+        return Array.isArray(stored) ? stored.filter(id => findItemById(id)) : [];
+    } catch (error) {
+        return [];
+    }
+};
+
+const saveRecentPage = (id) => {
+    if (!id || !findItemById(id)) return;
+
+    const recent = getRecentPageIds().filter(pageId => pageId !== id);
+    localStorage.setItem(RECENT_STORAGE_KEY, JSON.stringify([id, ...recent].slice(0, 6)));
+};
+
 const renderBookmarksPage = () => {
     const container = document.getElementById('bookmarks-list');
     if (!container) return;
@@ -700,18 +780,44 @@ const createSearchOverlay = () => {
     searchOverlay.className = 'search-overlay';
     searchOverlay.setAttribute('aria-hidden', 'true');
     searchOverlay.innerHTML = `
-        <div class="search-dialog" role="dialog" aria-modal="true" aria-label="Search Stratum">
-            <div class="search-box">
-                <input id="stratum-search-input" type="search" autocomplete="off" placeholder="Search guides, tools, and fixes">
+        <div class="search-dialog navigator-dialog" role="dialog" aria-modal="true" aria-label="Guide navigator">
+            <div class="search-header">
+                <div>
+                    <p class="search-kicker">Guide Navigator</p>
+                    <h2>Find the right page</h2>
+                </div>
                 <button type="button" class="search-close" aria-label="Close search">Close</button>
             </div>
-            <div id="stratum-search-results" class="search-results" aria-live="polite"></div>
+            <div class="search-box">
+                <span class="search-box-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                </span>
+                <input id="stratum-search-input" type="search" autocomplete="off" placeholder="Search guides, tools, and fixes">
+                <kbd>Ctrl K</kbd>
+            </div>
+            <div id="navigator-filters" class="navigator-filters" aria-label="Guide groups"></div>
+            <div id="stratum-search-results" class="search-results navigator-results" aria-live="polite"></div>
         </div>
     `;
 
     document.body.appendChild(searchOverlay);
     searchInput = searchOverlay.querySelector('#stratum-search-input');
     searchResults = searchOverlay.querySelector('#stratum-search-results');
+    navigatorFilters = searchOverlay.querySelector('#navigator-filters');
+    navigatorFilters.addEventListener('wheel', event => {
+        if (navigatorFilters.scrollWidth <= navigatorFilters.clientWidth) return;
+
+        const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY)
+            ? event.deltaX
+            : event.deltaY;
+
+        if (delta === 0) return;
+        event.preventDefault();
+        navigatorFilters.scrollLeft += delta;
+    }, { passive: false });
 
     searchOverlay.addEventListener('click', event => {
         if (event.target === searchOverlay) closeSearch();
@@ -721,13 +827,14 @@ const createSearchOverlay = () => {
     searchInput.addEventListener('input', () => {
         renderSearchResults(searchInput.value, searchResults);
     });
+    renderNavigatorFilters();
 };
 
 const setupSearch = () => {
     createSearchOverlay();
 
     if (searchToggle) {
-        searchToggle.addEventListener('click', () => openSearch());
+        searchToggle.addEventListener('click', () => openSearch('', { group: 'all' }));
     }
 
     document.addEventListener('keydown', event => {
@@ -754,8 +861,12 @@ const setupSearch = () => {
     });
 };
 
-const openSearch = async (query = '') => {
+const openSearch = async (query = '', options = {}) => {
     createSearchOverlay();
+    if (options.group) {
+        activeNavigatorGroup = options.group;
+        renderNavigatorFilters();
+    }
     searchOverlay.classList.add('visible');
     searchOverlay.setAttribute('aria-hidden', 'false');
     searchInput.value = query;
@@ -768,6 +879,130 @@ const closeSearch = () => {
     if (!searchOverlay) return;
     searchOverlay.classList.remove('visible');
     searchOverlay.setAttribute('aria-hidden', 'true');
+};
+
+const renderNavigatorFilters = () => {
+    if (!navigatorFilters) return;
+
+    const filters = [
+        { value: 'all', label: 'All', count: getAllPages().length },
+        ...getGroupedPages().map(group => ({
+            value: group.title,
+            label: group.title,
+            count: group.items.length
+        }))
+    ];
+
+    navigatorFilters.innerHTML = filters.map(filter => `
+        <button
+            type="button"
+            class="navigator-filter${activeNavigatorGroup === filter.value ? ' active' : ''}"
+            data-group="${escapeHtml(filter.value)}"
+            aria-pressed="${activeNavigatorGroup === filter.value ? 'true' : 'false'}"
+        >
+            <span>${escapeHtml(filter.label)}</span>
+            <small>${filter.count}</small>
+        </button>
+    `).join('');
+
+    navigatorFilters.querySelectorAll('.navigator-filter').forEach(button => {
+        button.addEventListener('click', () => {
+            activeNavigatorGroup = button.getAttribute('data-group') || 'all';
+            renderNavigatorFilters();
+            renderSearchResults(searchInput?.value || '', searchResults);
+        });
+    });
+
+    navigatorFilters.querySelector('.navigator-filter.active')?.scrollIntoView({
+        block: 'nearest',
+        inline: 'nearest'
+    });
+};
+
+const getPageTags = (page) => (page.tags || []).slice(0, 3);
+
+const renderNavigatorPage = (page) => {
+    const tags = getPageTags(page);
+
+    return `
+        <a class="navigator-page" href="#${escapeHtml(page.id)}">
+            <span class="navigator-page-icon" aria-hidden="true">${getIconSvg(page.icon || 'book')}</span>
+            <span class="navigator-page-copy">
+                <strong>${escapeHtml(page.label)}</strong>
+                <small>${escapeHtml(page.groupTitle || 'Utility')}</small>
+                ${tags.length ? `<span class="navigator-tags">${tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('')}</span>` : ''}
+            </span>
+        </a>
+    `;
+};
+
+const bindNavigatorLinks = (target) => {
+    target.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', closeSearch);
+    });
+};
+
+const getPagesByIds = (ids) => ids
+    .map(id => {
+        const itemInfo = findItemById(id);
+        return itemInfo ? { ...itemInfo.item, groupTitle: itemInfo.group.title } : null;
+    })
+    .filter(Boolean);
+
+const renderNavigatorCollection = (title, pages) => {
+    const visiblePages = getFilteredPages(pages);
+    if (visiblePages.length === 0) return '';
+
+    return `
+        <section class="navigator-section navigator-compact-section">
+            <div class="navigator-section-heading">
+                <span>${escapeHtml(title)}</span>
+            </div>
+            <div class="navigator-page-grid navigator-page-grid-compact">
+                ${visiblePages.map(renderNavigatorPage).join('')}
+            </div>
+        </section>
+    `;
+};
+
+const renderNavigatorHome = (target) => {
+    const quickPages = getPagesByIds([
+        'important',
+        'beginner-guide',
+        'safe-optimization-path',
+        'download-safety',
+        'bookmarks'
+    ]);
+    const recentPages = getPagesByIds(getRecentPageIds());
+    const bookmarkedPages = getPagesByIds(getStoredBookmarks());
+
+    const grouped = getGroupedPages()
+        .map(group => ({
+            ...group,
+            items: getFilteredPages(group.items)
+        }))
+        .filter(group => group.items.length > 0);
+
+    target.innerHTML = `
+        ${renderNavigatorCollection('Start points', quickPages)}
+        ${renderNavigatorCollection('Recently opened', recentPages)}
+        ${renderNavigatorCollection('Saved pages', bookmarkedPages)}
+        <div class="navigator-group-stack">
+            ${grouped.map(group => `
+                <section class="navigator-section">
+                    <div class="navigator-section-heading">
+                        <span>${escapeHtml(group.title)}</span>
+                        <small>${group.items.length} ${group.items.length === 1 ? 'page' : 'pages'}</small>
+                    </div>
+                    <div class="navigator-page-grid">
+                        ${group.items.map(renderNavigatorPage).join('')}
+                    </div>
+                </section>
+            `).join('')}
+        </div>
+    `;
+
+    bindNavigatorLinks(target);
 };
 
 const ensureSearchIndex = async () => {
@@ -817,22 +1052,24 @@ const scoreSearchResult = (page, terms) => {
     }, 0);
 };
 
+const getSearchTerms = (query) => String(query || '')
+    .toLowerCase()
+    .split(/\s+/)
+    .map(term => term.trim())
+    .filter(Boolean);
+
 const getSearchResults = (query) => {
-    const terms = String(query || '')
-        .toLowerCase()
-        .split(/\s+/)
-        .map(term => term.trim())
-        .filter(Boolean);
+    const terms = getSearchTerms(query);
 
     if (terms.length === 0) {
-        return getAllPages().slice(0, 8);
+        return getFilteredPages(getAllPages()).slice(0, 8);
     }
 
-    return searchIndex
+    return getFilteredPages(searchIndex)
         .map(page => ({ page, score: scoreSearchResult(page, terms) }))
         .filter(result => result.score > 0)
         .sort((a, b) => b.score - a.score || a.page.label.localeCompare(b.page.label))
-        .slice(0, 12)
+        .slice(0, 18)
         .map(result => result.page);
 };
 
@@ -840,6 +1077,13 @@ const renderSearchResults = async (query, target) => {
     if (!target) return;
 
     await ensureSearchIndex();
+    const terms = getSearchTerms(query);
+
+    if (terms.length === 0) {
+        renderNavigatorHome(target);
+        return;
+    }
+
     const results = getSearchResults(query);
 
     if (results.length === 0) {
@@ -847,51 +1091,28 @@ const renderSearchResults = async (query, target) => {
         return;
     }
 
-    target.innerHTML = results.map(page => `
-        <a class="search-result" href="#${escapeHtml(page.id)}">
-            <span>${escapeHtml(page.label)}</span>
-            <small>${escapeHtml(page.groupTitle || 'Utility')}</small>
-        </a>
-    `).join('');
+    target.innerHTML = `
+        <div class="navigator-result-summary">
+            <span>${results.length} ${results.length === 1 ? 'match' : 'matches'}</span>
+            <small>${escapeHtml(activeNavigatorGroup === 'all' ? 'All groups' : activeNavigatorGroup)}</small>
+        </div>
+        <div class="navigator-page-grid navigator-search-grid">
+            ${results.map(renderNavigatorPage).join('')}
+        </div>
+    `;
 
-    target.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', closeSearch);
-    });
+    bindNavigatorLinks(target);
 };
 
-
-const setupTheme = () => {
-    const savedTheme = localStorage.getItem('theme');
-    const theme = savedTheme || 'dark';
-
-    document.documentElement.setAttribute('data-theme', theme);
-    document.documentElement.classList.add('theme-transition');
-
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-        document.documentElement.classList.remove('theme-transition');
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-        requestAnimationFrame(() => {
-            document.documentElement.classList.add('theme-transition');
-        });
-    });
-
-    updateThemeIcon(theme);
-};
 
 const getRippleColor = () => {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    return isDark ? 'rgba(255, 255, 255, 0.2)' : 'rgba(17, 17, 19, 0.12)';
+    return 'rgba(255, 255, 255, 0.2)';
 };
 
 const setupButtonEffects = () => {
     const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-    const buttons = document.querySelectorAll('.topbar-actions a, .topbar-actions button, .lister-primary-action, .lister-secondary-action, .discord-cta, .bookmark-card button');
+    const buttons = document.querySelectorAll('.navigator-toggle, .topbar-actions a, .topbar-actions button, .lister-primary-action, .lister-secondary-action, .discord-cta, .bookmark-card button');
 
     buttons.forEach(button => {
         button.classList.add('ripple');
@@ -930,6 +1151,9 @@ const setupButtonEffects = () => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href.length > 1 && href !== '#') {
+                const routeId = href.substring(1);
+                if (findItemById(routeId)) return;
+
                 const target = document.querySelector(href);
                 if (target) {
                     e.preventDefault();
@@ -1068,14 +1292,6 @@ const loadContributors = async () => {
     }
 };
 
-const updateThemeIcon = (theme) => {
-    if (theme === 'dark') {
-        themeToggle.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
-    } else {
-        themeToggle.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M17.36 17.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M17.36 6.64l1.42-1.42"/></svg>';
-    }
-};
-
 const animateStats = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -1095,15 +1311,12 @@ const enhanceSearch = () => {
     const searchInput = document.getElementById('stratum-search-input');
     if (searchInput) {
         searchInput.addEventListener('focus', () => {
-            searchInput.placeholder = 'Press / to close, Esc to clear';
+            searchInput.placeholder = 'Type a guide, tool, problem, or keyword';
         });
         searchInput.addEventListener('blur', () => {
             searchInput.placeholder = 'Search guides, tools, and fixes';
         });
     }
-};
-
-const enhanceThemeToggle = () => {
 };
 
 const setupBackToTop = () => {
@@ -1144,6 +1357,5 @@ const setupBackToTop = () => {
 document.addEventListener('DOMContentLoaded', () => {
     init();
     enhanceSearch();
-    enhanceThemeToggle();
     setupBackToTop();
 });

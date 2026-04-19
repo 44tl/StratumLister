@@ -1,6 +1,7 @@
 <section class="lister-overview">
     <p class="lister-kicker">No-BS Technical Reference</p>
-    <p>Stratum Lister is a raw, technical reference for Windows, Linux, macOS, Android, and iOS optimization, privacy, security, and networking. Everything here is tested manually. No sponsored crap, no AI-generated filler, and no reuploaders. We link directly to sources and prioritize safe, reversible changes.</p>
+    <h1>StratumLister Knowledge Hub</h1>
+    <p>StratumLister is a raw, technical reference for Windows, Linux, macOS, Android, and iOS optimization, privacy, security, and networking. Everything here is tested manually. No sponsored crap, no AI-generated filler, and no reuploaders. We link directly to sources and prioritize safe, reversible changes.</p>
 <div class="lister-actions">
 <a class="lister-primary-action no-verified" href="#beginner-guide">Get Started</a>
 <a class="lister-secondary-action no-verified" href="https://discord.gg/VAu5PWkNdK" target="_blank" rel="noopener noreferrer">Join Discord</a>
@@ -39,7 +40,7 @@
 
 ## Get Involved
 
-Stratum Lister is a living knowledge base maintained by the community. We're always looking for manual contributors who can provide verified technical guides, source-first tool recommendations, and proper rollback instructions.
+StratumLister is a living knowledge base maintained by the community. We're always looking for manual contributors who can provide verified technical guides, source-first tool recommendations, and proper rollback instructions.
 
 **Spotted a mistake or want to add a guide?**
 Contributing is simple: fork the repository, follow our editorial standards (no AI content, verified sources), and submit a pull request. Or, join our Discord to discuss new tools and system optimizations with the community.

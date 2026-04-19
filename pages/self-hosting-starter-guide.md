@@ -1,4 +1,4 @@
-# Self-Hosting Starter Guide (2026)
+# Self-Hosting Starter Guide
 
 Self-hosting gives you full control over your data, services, and privacy. This guide covers everything needed to get started safely and effectively - from choosing hardware and configuring Docker to securing services with reverse proxies and automated SSL certificates.
 
@@ -51,7 +51,7 @@ Store all configuration files in version control (Git) from day one. Document ev
 
 **Cons:** You're responsible for power outages and hardware failures. Residential ISPs often block inbound ports or use dynamic IPs. Upload speeds are typically slower than download.
 
-**Hardware recommendations (2026):**
+**Hardware recommendations:**
 - **Entry level:** Intel N100 or N150 mini PC (16GB RAM, 512GB SSD) - widely available for $100-150
 - **Balanced:** Used Dell OptiPlex 7090/7080 or Lenovo ThinkCentre M75q - excellent value on the used market
 - **Storage:** Use ZFS (OpenZFS 2.2+) for redundancy and snapshot support
@@ -372,7 +372,7 @@ Generate a secure admin token: `openssl rand -base64 48`
 
 ### Forgejo (Git Repository Hosting)
 
-Forgejo is the community-maintained fork of Gitea and the recommended choice for self-hosted Git in 2026. It is more actively developed, fully open-source with no corporate governance concerns, and is used by major projects including Fedora. It is a drop-in replacement for Gitea.
+Forgejo is the community-maintained fork of Gitea and a strong default choice for self-hosted Git. It is more actively developed, fully open-source with no corporate governance concerns, and is used by major projects including Fedora. It is a drop-in replacement for Gitea.
 
 - [Forgejo Documentation](https://forgejo.org/docs/latest/)
 - [Forgejo Docker Installation](https://forgejo.org/docs/latest/admin/installation-docker/)

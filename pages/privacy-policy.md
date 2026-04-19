@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Stratum Lister is a static, open-source documentation site. We prioritize absolute transparency and zero tracking.
+StratumLister is a static, open-source documentation site. We prioritize absolute transparency and zero tracking.
 
 ## 1. Zero Data Collection
 We do not use accounts, forms, comments, trackers, or cookies. We have no backend to collect or store your personal data.
