@@ -1,6 +1,6 @@
 <section class="lister-overview">
     <p class="lister-kicker">No-BS Technical Reference</p>
-    <p>Stratum Lister is a raw, technical reference for system optimization, privacy, security, and networking. Everything here is tested manually. No sponsored crap, no AI-generated filler, and no reuploaders. We link directly to sources and prioritize safe, reversible changes.</p>
+    <p>Stratum Lister is a raw, technical reference for Windows, Linux, macOS, Android, and iOS optimization, privacy, security, and networking. Everything here is tested manually. No sponsored crap, no AI-generated filler, and no reuploaders. We link directly to sources and prioritize safe, reversible changes.</p>
 <div class="lister-actions">
 <a class="lister-primary-action no-verified" href="#beginner-guide">Get Started</a>
 <a class="lister-secondary-action no-verified" href="https://discord.gg/VAu5PWkNdK" target="_blank" rel="noopener noreferrer">Join Discord</a>

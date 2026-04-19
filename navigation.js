@@ -2,7 +2,7 @@ const siteStructure = [
     {
         title: "Start Here",
         items: [
-            { id: "stratum-lister", label: "Stratum Lister", icon: "home", color: "#ffffff", path: "pages/ch/stratum-lister.md", tags: ["home", "about", "standards"] },
+            { id: "stratum-lister", label: "Stratum Lister", icon: "home", color: "#ffffff", path: "pages/ch/stratum-lister.md", tags: ["home", "about", "standards", "android", "ios", "mac", "linux", "windows"] },
             { id: "important", label: "Important", icon: "alert-triangle", color: "#ffffff", path: "pages/ch/important.md", tags: ["safety", "policy", "verification"] },
             { id: "beginner-guide", label: "Beginner Guide", icon: "map", color: "#ffffff", path: "pages/beginner-guide.md", tags: ["start", "workflow", "guide"] },
             { id: "faq", label: "FAQ", icon: "help-circle", color: "#ffffff", path: "pages/ch/faq.md", tags: ["questions", "support"] },
@@ -179,12 +179,21 @@ const setupMobileNav = () => {
             sidebarOverlay.classList.toggle('visible');
         });
     }
+
     if (sidebarOverlay) {
         sidebarOverlay.addEventListener('click', () => {
             sidebar.classList.remove('open');
             sidebarOverlay.classList.remove('visible');
         });
     }
+
+    // Auto-close sidebar on link click (for mobile)
+    sidebarNav.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && e.target.closest('.nav-link')) {
+            sidebar.classList.remove('open');
+            sidebarOverlay.classList.remove('visible');
+        }
+    });
 };
 
 const closeMobileNav = () => {
@@ -515,7 +524,7 @@ const renderMarkdown = (markdown, item = null) => {
         : marked.parse(markdown);
     const cleanHtml = rendererUnavailable
         ? rawHtml
-        : DOMPurify.sanitize(rawHtml);
+        : DOMPurify.sanitize(rawHtml, { ADD_ATTR: ['class'] });
     contentArea.innerHTML = `<div class="markdown-body">${cleanHtml}</div>`;
     const markdownBody = contentArea.querySelector('.markdown-body');
 

@@ -2,6 +2,7 @@
 
 <div class="changelog-timeline">
 
+
 <div class="changelog-item">
 <div class="changelog-header">
 <span class="changelog-version-tag">v1.0.0</span>
@@ -12,10 +13,9 @@
 ### Modernization Milestone
 The platform has transitioned to a high-fidelity documentation interface focused on semantic discovery and technical transparency.
 
-- **Semantic Navigation**: Implemented a color-coded sidebar system to distinguish between Safety (Emerald), Warnings (Rose), and General Guides (Blue).
-- **Responsive Micro-Interactions**: Integrated entrance animations and icon scaling for enhanced UI feedback.
-- **Boxed Visual Hierarchy**: Redesigned core pages (Search, Changelog) to use boxed containers for better information isolation.
-- **Global Search Overlay**: Replaced the dedicated search route with a persistent, keyboard-driven search interface.
+- **Glassmorphism Design**: Applied modern glass morphism aesthetics with backdrop blur and transparency.
+- **Responsive & Scalable**: Enhanced responsiveness to support every device, screen size, and browser.
+- **Global Search Bar**: Introduced a persistent, keyboard-driven search overlay with real-time indexing.
 
 </div>
 </div>
@@ -23,7 +23,7 @@ The platform has transitioned to a high-fidelity documentation interface focused
 <div class="changelog-item">
 <div class="changelog-header">
 <span class="changelog-version-tag">v0.9.0</span>
-<span class="changelog-date">April 12, 2026</span>
+<span class="changelog-date">April 19, 2026</span>
 </div>
 <div class="changelog-content">
 
@@ -38,6 +38,43 @@ Established the foundational technical standards and initial content repository.
 </div>
 </div>
 
+<div class="changelog-item">
+<div class="changelog-header">
+<span class="changelog-version-tag">v0.8.2</span>
+<span class="changelog-date">April 18, 2026</span>
+</div>
+<div class="changelog-content">
+
+### Code Rewrite
+Complete codebase rewrite for improved maintainability and extensibility.
+
+</div>
 </div>
 
+<div class="changelog-item">
+<div class="changelog-header">
+<span class="changelog-version-tag">v0.8.1</span>
+<span class="changelog-date">March 23, 2026</span>
+</div>
+<div class="changelog-content">
 
+### GitHub Pages Migration
+Migrated hosting from GitBook to GitHub Pages for better control and performance.
+
+</div>
+</div>
+
+<div class="changelog-item">
+<div class="changelog-header">
+<span class="changelog-version-tag">v0.8.0</span>
+<span class="changelog-date">February 12, 2026</span>
+</div>
+<div class="changelog-content">
+
+### Initial Launch
+The website's foundational release with core content and basic structure.
+
+</div>
+</div>
+
+</div>

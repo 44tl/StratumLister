@@ -1,4 +1,4 @@
-A no-BS technical reference for Windows optimization, privacy, security, and networking. Everything is tested manually. No sponsored crap, no AI-filling, and no mirrors. Actionable, reversible, and sourced from official developers.
+A no-BS technical reference for Windows, Linux, macOS, Android, and iOS optimization, privacy, security, and networking. Everything is tested manually. No sponsored crap, no AI-filling, and no mirrors. Actionable, reversible, and sourced from official developers.
 
 ## Principles
 
