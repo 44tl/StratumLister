@@ -1,3 +1,5 @@
+import { marked, DOMPurify, hljs } from './vendor.js';
+
 const siteStructure = [
     {
         title: "Start Here",

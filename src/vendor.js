@@ -1,5 +1,5 @@
-import { marked } from 'marked';
-import DOMPurify from 'dompurify';
-import hljs from 'highlight.js';
+const marked = window.marked;
+const DOMPurify = window.DOMPurify;
+const hljs = window.hljs;
 
 export { marked, DOMPurify, hljs };
