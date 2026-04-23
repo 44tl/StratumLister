@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@vitest/ui": "^2.1.8",
+    "eslint": "^9.0.0",
     "jsdom": "^25.0.1",
     "marked": "^15.0.6",
     "dompurify": "^3.2.3",

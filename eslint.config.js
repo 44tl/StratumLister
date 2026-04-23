@@ -1,17 +1,25 @@
-export default {
-  env: {
-    browser: true,
-    es2022: true,
-    node: true
+import js from '@eslint/js'
+import globals from 'globals'
+
+export default [
+  { ignores: ["dist/", "node_modules/", "coverage/"] },
+  js.configs.recommended,
+  {
+    files: ["**/*.js"],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: "module",
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.serviceworker
+      }
+    }
   },
-  extends: ["eslint:recommended"],
-  parserOptions: {
-    ecmaVersion: 2022,
-    sourceType: "module"
-  },
-  rules: {
-    "no-console": "off",
-    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
-  },
-  ignorePatterns: ["dist/", "node_modules/", "coverage/"]
-}
+  {
+    rules: {
+      "no-console": "off",
+      "no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }]
+    }
+  }
+]
