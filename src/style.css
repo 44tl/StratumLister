@@ -687,7 +687,7 @@ body {
   max-width: 100%;
   background-color: transparent;
   border: none;
-  padding: 24px 106px 24px 24px;
+  padding: 24px 24px 24px 24px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-color: var(--scrollbar-thumb) transparent;

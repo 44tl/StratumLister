@@ -1,4 +1,5 @@
 import { marked, hljs } from './vendor.js';
+import './navigation.js';
 
 // Configure marked with custom renderer and highlight.js
 if (marked && hljs) {
