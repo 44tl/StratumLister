@@ -29,11 +29,6 @@
 - Built out CSS styling for platform-specific version tags (Windows, macOS, Linux, Android, iOS, and retired items)
 - Added a direct link to our Discord server in the topbar for anyone who needs help
 
-### Offline Support
-
-- Gave the service worker a full rewrite with smarter caching strategies
-- Pages load faster when you're offline, and the cache is now versioned properly
-
 </div>
 </div>
 
@@ -44,9 +39,8 @@
 </div>
 <div class="changelog-content">
 
-### Stratum Framework & PWA Support
+### Stratum Framework
 
-- **Service Worker (Offline Support)**: Integrated `sw.js` for PWA offline caching with a cache-first strategy for all assets.
 - **Sidebar Navigation**: Implemented dynamic sidebar with logo, versioning, and collapsible navigation groups (expanded by default).
 - **Topbar Evolution**: Replaced Browse with a dedicated mobile Menu button and removed redundant brand imagery for a cleaner look.
 - **Mobile Experience**: Added swipe gestures, manipulation-optimized touch targets (48px), and smooth elastic scrolling.
