@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="1691" height="921" alt="image" src="https://github.com/user-attachments/assets/aeacb5b3-87d7-404a-987c-589367163dba" />
+</p>
+
 ## What Is This?
 
 StratumLister is a curated knowledge hub that started as a personal collection of system tweaks and grew into a community-driven resource. We cover real-world optimization and security across all major platforms - from Windows registry cleanup to Android debloating, Linux driver handling to iOS jailbreak paths.
