@@ -439,9 +439,9 @@ const getIconSvg = (name) => {
 
 const escapeHtml = (value) => String(value ?? '')
     .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
+    .replace(/</g, '<')
+    .replace(/>/g, '>')
+    .replace(/"/g, '"')
     .replace(/'/g, '&#39;');
 
 const stripMarkdown = (markdown) => String(markdown ?? '')
@@ -1302,9 +1302,11 @@ const setupBackToTop = () => {
 };
 
 const bootstrap = () => {
+  init();
   enhanceSearch();
   setupBackToTop();
 };
+
  
 // Skip auto-bootstrap in test environment
 if (globalThis.TESTING) {
