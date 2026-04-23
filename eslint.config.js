@@ -5,7 +5,7 @@ export default [
   { ignores: ["dist/", "node_modules/", "coverage/"] },
   js.configs.recommended,
   {
-    files: ["**/*.js"],
+    files: ["**/*.js", "**/*.mjs"],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",
