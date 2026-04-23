@@ -35,7 +35,7 @@
   --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
   --sidebar-accent: #ffffff;
   --glass-bg: rgba(5, 5, 5, 0.75);
-  --glass-blur: blur(40px) saturate(150%);
+  --glass-blur: blur(7px) saturate(150%);
   --scrollbar-width: 5px;
   --scrollbar-track: transparent;
   --scrollbar-thumb: rgba(255, 255, 255, 0.1);
@@ -100,7 +100,7 @@ body {
 
 @media (min-width: 1024px) {
    body {
-      background-image: linear-gradient(135deg, rgba(20,20,25,0.92) 0%, rgba(10,10,12,0.96) 100%), url('https://w.wallhaven.cc/full/vp/wallhaven-vpo7gm.jpg');
+      background-image: linear-gradient(135deg, rgba(20,20,25,0.92) 0%, rgba(10,10,12,0.96) 100%), url('https://w.wallhaven.cc/full/5y/wallhaven-5yk6k9.jpg');
       background-size: cover;
       background-position: center center;
       background-attachment: fixed;

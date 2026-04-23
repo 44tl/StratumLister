@@ -2,10 +2,32 @@
   "name": "stratum",
   "version": "1.0.0",
   "description": "Premium Docs Template",
+  "type": "module",
   "scripts": {
-    "dev": "serve ."
+    "dev": "vite",
+    "build": "vite build && node -e \"require('fs').cpSync('pages', 'dist/pages', {recursive: true})\"",
+    "preview": "vite preview",
+    "serve": "vite preview --port 3000",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
   },
   "devDependencies": {
-    "serve": "^14.2.1"
+    "@vitest/ui": "^2.1.8",
+    "jsdom": "^25.0.1",
+    "marked": "^15.0.6",
+    "dompurify": "^3.2.3",
+    "highlight.js": "^11.11.1",
+    "vitest": "^2.1.8",
+    "vite": "^6.0.11",
+    "serve": "^14.2.1",
+    "svgo": "^4.0.1"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

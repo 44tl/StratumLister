@@ -12,7 +12,7 @@ Before starting, ensure you have:
 - **Command-line comfort** - you'll work with terminals, config files, and logs
 - **Time for learning** - self-hosting is an ongoing process, not a one-time setup
 - **Backup strategy** - know where your data lives and how to restore it
-- **Risk tolerance** - you're responsible for security, updates, and reliability
+- **Risk tolerance** - you are responsible for security, updates, and reliability
 
 Self-hosting is rewarding but requires active maintenance. If you need fully managed services, consider commercial alternatives first.
 
@@ -45,7 +45,7 @@ Store all configuration files in version control (Git) from day one. Document ev
 
 ### 1. Homelab (Local Hardware)
 
-**Use when:** You want maximum control, have spare hardware, and don't need 100% uptime.
+**Use when:** You want maximum control, have spare hardware, and do not need 100% uptime.
 
 **Pros:** Full hardware control, no monthly fees, excellent learning environment.
 
@@ -59,7 +59,7 @@ Store all configuration files in version control (Git) from day one. Document ev
 
 ### 2. VPS (Virtual Private Server)
 
-**Use when:** You need reliable uptime, a static IP, and don't want hardware maintenance.
+**Use when:** You need reliable uptime, a static IP, and do not want hardware maintenance.
 
 **Pros:** Static IP, 99.9%+ uptime, symmetric bandwidth, professional networking.
 
@@ -286,7 +286,7 @@ For services you only want accessible from your own devices - not publicly expos
 
 ### Let's Encrypt (Free and Automatic)
 
-Free, browser-trusted certificates with automatic 90-day renewal. If you're using Traefik or Caddy, this is handled entirely for you with no extra steps. For standalone Nginx setups, use Certbot:
+Free, browser-trusted certificates with automatic 90-day renewal. If you are using Traefik or Caddy, this is handled entirely for you with no extra steps. For standalone Nginx setups, use Certbot:
 
 - [Let's Encrypt Getting Started](https://letsencrypt.org/getting-started/)
 - [Certbot Documentation](https://certbot.eff.org/docs/)
@@ -543,7 +543,7 @@ Import [Grafana dashboard #1860](https://grafana.com/grafana/dashboards/1860) fo
 
 ## Backups
 
-A service isn't truly self-hosted if you can't recover from a disk failure. Backups are not optional.
+A service is not truly self-hosted if you cannot recover from a disk failure. Backups are not optional.
 
 ### Principles
 

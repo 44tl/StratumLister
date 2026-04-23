@@ -1,7 +1,7 @@
 <section class="lister-overview">
     <p class="lister-kicker">No-BS Technical Reference</p>
     <h1>StratumLister Knowledge Hub</h1>
-    <p>StratumLister is a raw, technical reference for Windows, Linux, macOS, Android, and iOS optimization, privacy, security, and networking. Everything here is tested manually. No sponsored crap, no AI-generated filler, and no reuploaders. We link directly to sources and prioritize safe, reversible changes.</p>
+    <p>StratumLister is a raw, technical reference for Windows, Linux, macOS, Android, and iOS optimization, privacy, security, and networking. Everything here is tested manually. No sponsored content, no AI-generated filler, and no reuploaders. We link directly to sources and prioritize safe, reversible changes.</p>
 <div class="lister-actions">
 <a class="lister-primary-action no-verified" href="#beginner-guide">Get Started</a>
 <a class="lister-secondary-action no-verified" href="https://discord.gg/VAu5PWkNdK" target="_blank" rel="noopener noreferrer">Join Discord</a>
@@ -14,7 +14,7 @@
 
 <div class="lister-principles">
     <article class="lister-principle">
-        <p>No sponsorships, affiliate links, or paid placements. If we recommend it, it's because we actually use it.</p>
+        <p>No sponsorships, affiliate links, or paid placements. If we recommend it, it is because we actually use it.</p>
     </article>
     <article class="lister-principle">
         <h3>Manually Verified</h3>
@@ -30,11 +30,11 @@
     </article>
     <article class="lister-principle">
         <h3>Practical Knowledge</h3>
-        <p>We explain why settings matter and how they impact your system, so you're never left guessing about what you've modified.</p>
+        <p>We explain why settings matter and how they impact your system, so you are never left guessing about what you've modified.</p>
     </article>
     <article class="lister-principle">
         <h3>No Filler</h3>
-        <p>If a guide or tool is on Stratum, it works. We don't do "filler" content just to look busy.</p>
+        <p>If a guide or tool is on Stratum, it works. We do not produce filler content solely to appear active.</p>
     </article>
 </div>
 
@@ -45,4 +45,3 @@ StratumLister is a living knowledge base maintained by the community. We're alwa
 **Spotted a mistake or want to add a guide?**
 Contributing is simple: fork the repository, follow our editorial standards (no AI content, verified sources), and submit a pull request. Or, join our Discord to discuss new tools and system optimizations with the community.
 
- <p class="lister-license-note">MIT Licensed - fork, copy, and submit pull requests freely. Just keep the no-AI rule and attribution when reusing content.</p>

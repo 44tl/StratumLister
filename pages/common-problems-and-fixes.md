@@ -155,7 +155,7 @@ Reboot > Widgets should repopulate (may need sign-in)
 
 ## 8. Windows Defender / Security Center Broken
 
-**Symptoms:** App won't open, real-time off, errors
+**Symptoms:** App will not open, real-time off, errors
 
 **Causes:** Disabled Security Center or Defender services
 

@@ -1,28 +1,43 @@
-A no-BS technical reference for Windows, Linux, macOS, Android, and iOS optimization, privacy, security, and networking. Everything is tested manually. No sponsored crap, no AI-filling, and no mirrors. Actionable, reversible, and sourced from official developers.
+## What Is This?
 
-## Principles
+StratumLister is a curated knowledge hub that started as a personal collection of system tweaks and grew into a community-driven resource. We cover real-world optimization and security across all major platforms - from Windows registry cleanup to Android debloating, Linux driver handling to iOS jailbreak paths.
 
-- **No Affiliates** - We don't make money from recommendations.
-- **Manual Only** - No AI-generated filler. Everything is tested.
-- **Safety First** - Restore points and rollback steps are mandatory.
-- **Direct Sources** - External links go to official developers or GitHub.
+If you're tired of clickbait "top 10" lists and sketchy download mirrors, this is your place.
 
-## Contributing
+## Our Standards
 
-Spotted a mistake or want to add a guide?
-- Manual edits and personal testing only.
-- Verifiable sources and clear testing notes required.
-- Include rollback/uninstall steps for every tool.
-- No AI-assisted bulk content.
+- **No Affiliates** - We don't make money from recommendations. If it's listed, we use it.
+- **Official Sources** - External links go to developer sites or GitHub repos. No third-party reupload sites.
+- **No Filler** - If a page exists, it has useful information. We don't pad content for SEO.
+-- **No Ads** - I don't like ads.
 
-See the [Contribution Guide](pages/contribution-guide.md) for full details.
+## What We Cover
+
+- **Windows** - Optimization, debloating, driver management, update control, custom ISOs
+- **Linux** - Distro selection, package management, gaming (Proton/Steam), hardware drivers
+- **macOS** - Terminal workflows, Homebrew, security hardening, Apple Silicon vs Intel
+- **Android** - Debloating, ADB, rooting, custom ROMs (GrapheneOS, LineageOS), backup strategies
+- **iOS** - Security settings, sideloading, jailbreaking (palera1n, Dopamine), backup/restore
+- **Privacy & Security** - Browser hardening, password managers, 2FA, VPN, threat modeling
+- **Hardware & Gaming** - GPU driver cleanup (NVIDIA/AMD), Steam optimization, network troubleshooting
+- **Self-Hosting** - Getting started with Docker-based services and backups
 
 ## Community
 
-Join the Discord for raw discussion, troubleshooting, and updates:
+We maintain a Discord for discussion, troubleshooting, and tool vetting:
 
-[discord.gg/VAu5PWkNdK](https://discord.gg/VAu5PWkNdK)
+[Join Discord](https://discord.gg/VAu5PWkNdK)
+
+## Contributing
+
+We accept manual contributions only. If you've tested a tool, verified a source, or written a guide with proper rollback steps, see our [Contribution Guide](pages/contribution-guide.md).
+
+Short version:
+- No AI-generated content, ever.
+- Every recommendation must be reversible.
+- Cite official sources.
+- Include clear prerequisites and risks.
 
 ## License
 
-MIT License - fork, copy, and submit PRs freely. Just keep the no-AI rule and attribute the source.
+MIT. Fork, copy, submit PRs. Just keep the no-AI rule and attribute the source.

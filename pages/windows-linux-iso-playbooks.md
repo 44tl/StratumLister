@@ -1,6 +1,6 @@
-# Windows/Linux - ISO/Playbook's
+# Windows/Linux ISO and Playbooks
 
-In this list There's both Windows Recommendations & Linux.
+This guide covers both Windows optimization options and Linux distribution recommendations.
 
 ## Overview
 The performance gap between stock Windows and optimized alternatives can be significant on low-memory or older systems. This guide focuses on options that balance performance gains with update reliability, security, and recovery.
@@ -19,7 +19,7 @@ The performance gap between stock Windows and optimized alternatives can be sign
 **Implementation Process**
 * Method: Build custom ISO using official Microsoft files
 * Security Assurance: No third-party malware injection risk
-* Procedure: Use official ISO → Run PowerShell tool → Select "MicroWin"
+* Procedure: Use official ISO > Run PowerShell tool > Select "MicroWin"
 * Tool Command: irm christitus.com/win | iex (run in Admin PowerShell)
 
 **Advantages**

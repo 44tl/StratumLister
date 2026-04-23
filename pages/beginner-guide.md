@@ -16,11 +16,13 @@ Follow these five steps to ensure your optimization journey is safe and successf
 | Your Primary Goal | Recommended Start | What to Avoid |
 | :--- | :--- | :--- |
 | **Clean & Fast Windows** | [Safe Optimization Path](#safe-optimization-path) | Automated "Debloat" scripts |
-| **Move to Linux** | [Linux Overview](#linux-overview) & [Linux Install Checklist](#linux-install-checklist) | Random distro respins and unverified ISOs |
+| **Move to Linux** | [Self-Hosting Starter Guide](#self-hosting-starter-guide) (OS section) | Random distro respins and unverified ISOs |
+| **Self-Hosted Services** | [Self-Hosting Starter Guide](pages/self-hosting-starter-guide.md) | Unmaintained Docker images |
 | **Fix System Damage** | [Emergency Recovery Path](#emergency-recovery-path) | Stacking multiple "Repair" tools |
 | **Gaming Performance** | [Game Launcher Optimization](#game-launcher-optimization) | Kernel-level "FPS Boost" packs |
-| **Browser Privacy** | [Browser Hardening Guide](#browser-hardening-guide) | Extension over-saturation |
-| **Account Security** | [2FA Basics](#2fa-basics) & [Passwords](#password-manager-guide) | SMS-based multi-factor auth |
+| **Browser Privacy** | [Browser Hardening Guide](pages/browser-hardening-guide.md) | Extension over-saturation |
+| **Account Security** | [Password Manager Guide](pages/password-manager-guide.md) | SMS-based multi-factor auth |
+| **Mobile Device Management** | [Mobile Security](#mobile-security) | Unmanaged BYOD policies |
 
 ## Core Principles for Success
 - **Official First**: Always prefer official Windows settings over manual registry edits.
@@ -35,4 +37,21 @@ Before downloading any software, consult the [Link Safety Index](#link-safety-in
 ## Disaster Recovery
 If you experience system instability, **stop applying new changes immediately.** Consult the [Emergency Recovery Path](#emergency-recovery-path) first, then troubleshoot specific issues using [Common Problems & Fixes](#common-problems-and-fixes).
 
+## Mobile Security
 
+Modern threat vectors extend beyond desktop computers. Secure your mobile devices:
+
+| Platform | Recommended | Notes |
+|----------|------------|-------|
+| **iOS** | Stay on latest iOS | Apple's locked-down model is effective; never jailbreak for "optimization" |
+| **Android** | Pixel withstock Android or GrapheneOS | Avoid OEM skins that stop updates early |
+| **App Stores** | F-Droid for open-source, Google Play for mainstream | Sideloaded APKs are a major attack vector |
+| **Messaging** | Signal (default), iMessage (Apple-to-Apple) | Avoid SMS for sensitive content |
+
+### Mobile Best Practices
+- Keep iOS/Android updated
+- Enable Find My Device (helps recovery and remote wipe)
+- Use a strong passcode (6-digit minimum, alphanumeric preferred)
+- Disable lock screen notifications with sensitive content
+- Use password manager with biometric unlock on mobile
+- Review app permissions regularly - revoke unnecessary access to camera, microphone, location

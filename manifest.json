@@ -1,0 +1,46 @@
+{
+  "name": "StratumLister",
+  "short_name": "Stratum",
+  "description": "Curated technical knowledge base for system optimization, privacy, security across Windows/Linux/macOS/Android/iOS.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "theme_color_light": "#ffffff",
+  "icons": [
+    {
+      "src": "stratum.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities", "developer-tools"],
+  "lang": "en-US",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Important Guides",
+      "short_name": "Important",
+      "description": "Safety first: Essential guides",
+      "url": "/#important",
+      "icons": [{"src": "stratum.svg", "sizes": "96x96"}]
+    },
+    {
+      "name": "Search All Guides", 
+      "short_name": "Search",
+      "description": "Quick search across all content",
+      "url": "/#search",
+      "icons": [{"src": "stratum.svg", "sizes": "96x96"}]
+    },
+    {
+      "name": "Windows Optimization",
+      "short_name": "Windows",
+      "description": "Windows guides hub", 
+      "url": "/#windows-optimization",
+      "icons": [{"src": "stratum.svg", "sizes": "96x96"}]
+    }
+  ]
+}
+

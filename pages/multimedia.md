@@ -29,7 +29,7 @@ A professional-grade, free, and open-source tool with a massive plugin ecosystem
 The most feature-packed screenshot utility available for Windows.
 
 * **Capture Options**: Region shots, scrolling capture, and GIF/video recording.
-* **Advanced Tools**: OCR text extraction, "Analyze Image" AI tools (ChatGPT/Gemini integration), and annotations.
+* **Advanced Tools**: OCR text extraction, image annotations, and region highlighting.
 * **Technical Note**: Use the official site or repository and keep ShareX updated through the project's supported channels.
 * **Workflows**: Fully customizable "After capture" tasks to automate uploading, saving, and editing.
 

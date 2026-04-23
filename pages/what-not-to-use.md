@@ -157,9 +157,9 @@ Never modify system files for performance reasons.
 ### Manual Cleanup
 Safest method.
 
-* Settings → Apps → Installed apps → remove unwanted bundled apps
-* Task Manager → Startup → disable unnecessary startup items
-* Settings → Privacy and Security → disable suggestions and advertising features
+* Settings > Apps > Installed apps > remove unwanted bundled apps
+* Task Manager > Startup > disable unnecessary startup items
+* Settings > Privacy and Security > disable suggestions and advertising features
 
 No system components removed.
 

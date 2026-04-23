@@ -6,7 +6,9 @@ const siteStructure = [
             { id: "important", label: "Important", icon: "alert-triangle", color: "#ffffff", path: "pages/ch/important.md", tags: ["safety", "policy", "verification"] },
             { id: "beginner-guide", label: "Beginner Guide", icon: "map", color: "#ffffff", path: "pages/beginner-guide.md", tags: ["start", "workflow", "guide"] },
             { id: "faq", label: "FAQ", icon: "help-circle", color: "#ffffff", path: "pages/ch/faq.md", tags: ["questions", "support"] },
-            { id: "glossary", label: "Glossary", icon: "book", color: "#ffffff", path: "pages/ch/glossary.md", tags: ["terms", "definitions"] }
+            { id: "glossary", label: "Glossary", icon: "book", color: "#ffffff", path: "pages/ch/glossary.md", tags: ["terms", "definitions"] },
+            { id: "terms-of-service", label: "Terms of Service", icon: "file-text", color: "#ffffff", path: "pages/terms-of-service.md", tags: ["legal", "terms"] },
+            { id: "privacy-policy", label: "Privacy Policy", icon: "shield", color: "#ffffff", path: "pages/privacy-policy.md", tags: ["legal", "privacy"] }
         ]
     },
     {
@@ -141,17 +143,12 @@ const siteStructure = [
     }
 ];
 
-const utilityPages = [
-    { id: "terms-of-service", label: "Terms of Service", groupTitle: "Legal", path: "pages/terms-of-service.md" },
-    { id: "privacy-policy", label: "Privacy Policy", groupTitle: "Legal", path: "pages/privacy-policy.md" }
-];
+const BOOKMARK_STORAGE_KEY = 'stratum-bookmarks';
+const RECENT_STORAGE_KEY = 'stratum-recent-pages';
 
 const CONTRIBUTORS_OWNER = '44tl';
 const CONTRIBUTORS_REPO_URL = 'https://github.com/44tl/StratumLister';
-const CONTRIBUTORS_API_URL = 'https://api.github.com/repos/44tl/StratumLister/contributors?per_page=100';
-
-const BOOKMARK_STORAGE_KEY = 'stratum-bookmarks';
-const RECENT_STORAGE_KEY = 'stratum-recent-pages';
+const CONTRIBUTORS_API_URL = 'https://api.github.com/repos/44tl/StratumLister/contributors?per_page=10';
 
 const sidebarNav = document.getElementById('sidebar-nav');
 const contentArea = document.getElementById('content-area');
@@ -161,6 +158,7 @@ const sidebarOverlay = document.getElementById('sidebar-overlay');
 const navigatorToggle = document.getElementById('navigator-toggle');
 const searchToggle = document.getElementById('search-toggle');
 const bookmarkToggle = document.getElementById('bookmark-toggle');
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 
 const markdownCache = new Map();
 const emptyPages = new Set();
@@ -176,8 +174,7 @@ const getAllPages = () => [
     ...siteStructure.flatMap(group => group.items.map(item => ({
         ...item,
         groupTitle: group.title
-    }))),
-    ...utilityPages
+    })))
 ];
 
 const getGroupedPages = () => [
@@ -187,28 +184,19 @@ const getGroupedPages = () => [
             ...item,
             groupTitle: group.title
         }))
-    })),
-    {
-        title: 'Legal',
-        items: utilityPages.map(item => ({
-            ...item,
-            groupTitle: item.groupTitle || 'Legal'
-        }))
-    }
+    }))
 ];
 
 const getFilteredPages = (pages) => {
     if (activeNavigatorGroup === 'all') return pages;
-    return pages.filter(page => (page.groupTitle || 'Legal') === activeNavigatorGroup);
+    return pages.filter(page => page.groupTitle === activeNavigatorGroup);
 };
 
 const checkPageAvailability = async () => {
+    return; 
     const checks = [];
 
-    const pagesToCheck = [
-        ...siteStructure.flatMap(group => group.items),
-        ...utilityPages
-    ];
+    const pagesToCheck = siteStructure.flatMap(group => group.items);
 
     pagesToCheck.forEach(item => {
         checks.push(
@@ -237,16 +225,17 @@ const init = () => {
     setupSearch();
     setupBookmarks();
     setupButtonEffects();
+    
     window.addEventListener('hashchange', handleRouteChange);
 
-    if (!window.location.hash) {
+    // Initial load
+    const currentHash = window.location.hash.substring(1);
+    if (!currentHash) {
         const initialId = siteStructure[0].items[0].id;
         window.location.hash = initialId;
-        handleRouteChange();
     } else {
         handleRouteChange();
     }
-
 
     checkPageAvailability().catch(error => {
         console.warn('Failed to pre-check pages', error);
@@ -256,6 +245,13 @@ const init = () => {
 const setupNavigator = () => {
     if (navigatorToggle) {
         navigatorToggle.addEventListener('click', () => openSearch('', { group: 'all' }));
+    }
+
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', () => {
+            if (sidebar) sidebar.classList.toggle('open');
+            if (sidebarOverlay) sidebarOverlay.classList.toggle('visible');
+        });
     }
 
     if (sidebarOverlay) {
@@ -341,14 +337,6 @@ const findItemById = (id) => {
     for (const group of siteStructure) {
         const item = group.items.find(i => i.id === id);
         if (item) return { group, item };
-    }
-
-    const utilityPage = utilityPages.find(item => item.id === id);
-    if (utilityPage) {
-        return {
-            group: { title: utilityPage.groupTitle },
-            item: utilityPage
-        };
     }
 
     return null;
@@ -438,7 +426,9 @@ const getIconSvg = (name) => {
         'play': '<polygon points="5 3 19 12 5 21 5 3"></polygon>',
         'eye-off': '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line>',
         'globe': '<circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>',
-        'key': '<path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3L15.5 7.5z"></path>'
+        'key': '<path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3L15.5 7.5z"></path>',
+        'users': '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>',
+        'file-text': '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline>'
     };
     return `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${icons[name] || ''}</svg>`;
 };
@@ -550,24 +540,16 @@ const loadContent = async (path, item = null) => {
     const routeId = window.location.hash.substring(1);
     const navLink = document.querySelector(`.nav-link[data-id="${routeId}"]`);
 
-
     if (emptyPages.has(routeId)) {
         renderEmptyState();
         return;
     }
 
-
     if (navLink) navLink.classList.remove('empty');
 
     try {
-        if (markdownCache.has(path)) {
-            renderMarkdown(markdownCache.get(path), item);
-            return;
-        }
-
-        contentArea.innerHTML = '<div class="content-loading"><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div>';
-
         const response = await fetch(path);
+        
         if (!response.ok) {
             throw new Error('Not found');
         }
@@ -576,6 +558,7 @@ const loadContent = async (path, item = null) => {
         markdownCache.set(path, markdown);
         renderMarkdown(markdown, item);
     } catch (error) {
+        console.error('Failed to load:', path, error);
         emptyPages.add(routeId);
         if (navLink) navLink.classList.add('empty');
         renderEmptyState();
@@ -602,11 +585,11 @@ const loadContent = async (path, item = null) => {
          img.decoding = 'async';
      });
 
-     if (typeof hljs !== 'undefined') {
-         contentArea.querySelectorAll('pre code').forEach((block) => {
-             hljs.highlightElement(block);
-         });
-     }
+if (typeof hljs !== 'undefined') {
+          contentArea.querySelectorAll('pre code.hljs:not([data-highlighted])').forEach((block) => {
+              block.setAttribute('data-highlighted', 'true');
+          });
+      }
 
     contentArea.querySelectorAll('pre').forEach(pre => {
         if (pre.querySelector('.copy-button')) return;
@@ -653,14 +636,13 @@ const loadContent = async (path, item = null) => {
         }
     });
 
-    if (window.location.hash === '#contributors') {
-        loadContributors();
-    }
-
     if (window.location.hash === '#bookmarks') {
         renderBookmarksPage();
     }
 
+    if (window.location.hash === '#contributors') {
+        loadContributors();
+    }
 
     if (item && item.id === 'stratum-lister') {
         animateStats();
@@ -1033,6 +1015,35 @@ const ensureSearchIndex = async () => {
     return searchIndexPromise;
 };
 
+const fuzzyMatch = (text, term) => {
+    const lower = text.toLowerCase();
+    const search = term.toLowerCase();
+    if (lower.includes(search)) return 1;
+    const words = lower.split(/[\s\-_]+/);
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].startsWith(search)) return 0.9;
+        if (words[i].length >= 3 && levenshteinDistance(words[i], search) <= 1) return 0.7;
+    }
+    if (lower.split('').filter(c => search.includes(c)).length >= search.length * 0.7) return 0.5;
+    return 0;
+};
+
+const levenshteinDistance = (a, b) => {
+    if (a.length === 0) return b.length;
+    if (b.length === 0) return a.length;
+    const matrix = [];
+    for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+    for (let i = 0; i <= a.length; i++) matrix[0][i] = i;
+    for (let i = 1; i <= b.length; i++) {
+        for (let j = 1; j <= a.length; j++) {
+            matrix[i][j] = b.charAt(i - 1) === a.charAt(j - 1)
+                ? matrix[i - 1][j - 1]
+                : Math.min(matrix[i - 1][j - 1] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j] + 1);
+        }
+    }
+    return matrix[b.length][a.length];
+};
+
 const scoreSearchResult = (page, terms) => {
     const haystacks = {
         label: page.label.toLowerCase(),
@@ -1043,7 +1054,8 @@ const scoreSearchResult = (page, terms) => {
     };
 
     return terms.reduce((score, term) => {
-        if (haystacks.label.includes(term)) score += 12;
+        const fuzzy = fuzzyMatch(haystacks.label, term);
+        if (fuzzy > 0) score += Math.round(12 * fuzzy);
         if (haystacks.group.includes(term)) score += 6;
         if (haystacks.tags.includes(term)) score += 8;
         if (haystacks.headings.includes(term)) score += 6;
@@ -1112,7 +1124,7 @@ const getRippleColor = () => {
 const setupButtonEffects = () => {
     const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-    const buttons = document.querySelectorAll('.navigator-toggle, .topbar-actions a, .topbar-actions button, .lister-primary-action, .lister-secondary-action, .discord-cta, .bookmark-card button');
+    const buttons = document.querySelectorAll('.topbar-search, .topbar-actions a, .topbar-actions button, .lister-primary-action, .lister-secondary-action, .discord-cta, .bookmark-card button');
 
     buttons.forEach(button => {
         button.classList.add('ripple');
@@ -1188,108 +1200,39 @@ const setupTopbarRoutes = () => {
     });
 };
 
-const getNextContributorsPage = (linkHeader) => {
-    if (!linkHeader) return null;
-
-    const nextLink = linkHeader
-        .split(',')
-        .map(link => link.trim())
-        .find(link => link.includes('rel="next"'));
-
-    const match = nextLink?.match(/<([^>]+)>/);
-    return match ? match[1] : null;
-};
+const contributorsAbort = { signal: null };
 
 const fetchContributors = async () => {
-    const contributorsByLogin = new Map();
-    let nextUrl = CONTRIBUTORS_API_URL;
+    try {
+        const controller = new AbortController();
+        contributorsAbort.signal = controller.signal;
+        setTimeout(() => controller.abort(), 5000);
 
-    while (nextUrl) {
-        const response = await fetch(nextUrl);
+        const response = await fetch(CONTRIBUTORS_API_URL, { signal: controller.signal });
 
-        if (!response.ok) {
-            throw new Error('Unable to load contributors');
-        }
+        if (!response.ok) return [];
 
-        const contributors = await response.json();
-        if (!Array.isArray(contributors)) {
-            throw new Error('Unexpected contributors response');
-        }
+        const data = await response.json();
+        if (!Array.isArray(data)) return [];
 
-        contributors.forEach(contributor => {
-            const login = String(contributor.login ?? '').toLowerCase();
-            if (login && !contributorsByLogin.has(login)) {
-                contributorsByLogin.set(login, contributor);
-            }
-        });
-
-        nextUrl = getNextContributorsPage(response.headers.get('Link'));
+        return data.slice(0, 10).filter(c => c.login);
+    } catch {
+        return [];
     }
-
-    return Array.from(contributorsByLogin.values()).sort((a, b) => {
-        return (Number(b.contributions) || 0) - (Number(a.contributions) || 0);
-    });
-};
-
-const renderContributorCard = (contributor) => {
-    const loginRaw = String(contributor.login ?? 'Unknown');
-    const login = escapeHtml(loginRaw);
-    const profileUrl = escapeHtml(contributor.html_url || `https://github.com/${encodeURIComponent(loginRaw)}`);
-    const avatarUrl = escapeHtml(contributor.avatar_url || '');
-    const contributionCount = Number(contributor.contributions) || 0;
-    const contributionLabel = contributionCount === 1 ? 'contribution' : 'contributions';
-    const isOwner = loginRaw.toLowerCase() === CONTRIBUTORS_OWNER;
-    const ownerTag = isOwner ? '<span class="contributor-owner-tag">Owner</span>' : '';
-
-    return `
-        <article class="contributor${isOwner ? ' contributor-owner' : ''}">
-            <img class="contributor-avatar" src="${avatarUrl}" alt="${login} avatar" width="52" height="52" loading="lazy">
-            <div class="contributor-details">
-                <div class="contributor-heading">
-                    <a href="${profileUrl}" target="_blank" rel="noopener noreferrer">${login}</a>
-                    ${ownerTag}
-                </div>
-                <small>${contributionCount} ${contributionLabel}</small>
-            </div>
-        </article>
-    `;
 };
 
 const loadContributors = async () => {
-    const contributorsList = document.getElementById('contributors-list');
-    if (!contributorsList) return;
+    const el = document.getElementById('contributors-list');
+    if (!el) return;
 
-    contributorsList.innerHTML = `
-        <div class="contributors-loading" aria-live="polite">
-            <div class="contributor-skeleton"></div>
-            <div class="contributor-skeleton"></div>
-            <div class="contributor-skeleton"></div>
-        </div>
-    `;
+    const list = await fetchContributors();
 
-    try {
-        const contributors = await fetchContributors();
-        if (contributors.length === 0) {
-            contributorsList.innerHTML = '<div class="contributors-status">No contributor data is available right now.</div>';
-            return;
-        }
-
-        const countLabel = contributors.length === 1 ? 'contributor' : 'contributors';
-        const html = contributors.map(renderContributorCard).join('');
-
-        contributorsList.innerHTML = `
-            <div class="contributors-toolbar">
-                <div>
-                    <p class="contributors-eyebrow">Live GitHub data</p>
-                    <p class="contributors-count">${contributors.length} ${countLabel}</p>
-                </div>
-                <a class="contributors-repo-link no-verified" href="${CONTRIBUTORS_REPO_URL}" target="_blank" rel="noopener noreferrer">Open repository</a>
-            </div>
-            <div class="contributors-grid">${html}</div>
-        `;
-    } catch (error) {
-        contributorsList.innerHTML = '<div class="contributors-status contributors-status-error">Contributor information is currently unavailable.</div>';
+    if (!list.length) {
+        el.innerHTML = '';
+        return;
     }
+
+    el.innerHTML = `<span class="contributors-count-box">${list.length} contributor${list.length !== 1 ? 's' : ''} on GitHub</span>`;
 };
 
 const animateStats = () => {
@@ -1354,8 +1297,14 @@ const setupBackToTop = () => {
     toggleVisibility();
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+const bootstrap = () => {
     init();
     enhanceSearch();
     setupBackToTop();
-});
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootstrap);
+} else {
+    bootstrap();
+}

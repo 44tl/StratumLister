@@ -7,12 +7,12 @@ Sometimes the fastest fix is simply rolling back. Here's when you should serious
 These issues are usually caused by tweaks or debloat tools and are reversible:
 
 - Windows Update suddenly stops working
-- Microsoft Store or built-in apps won't open
+- Microsoft Store or built-in apps will not open
 - Audio, Bluetooth, or Wi-Fi services fail after tweaks
 - Explorer or taskbar keeps crashing
 - System feels slower after HPET/CPU tweaks
 - You removed something you now need (OneDrive, Widgets, Web Experience Pack)
-- You applied multiple debloat tools at once and can't tell what broke
+- You applied multiple debloat tools at once and cannot tell what broke
 
 **Restore Point = Safe, fast, reversible.** Use this before trying anything drastic.
 

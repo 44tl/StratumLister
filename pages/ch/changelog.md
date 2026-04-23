@@ -4,6 +4,61 @@
 
 <div class="changelog-item">
 <div class="changelog-header">
+<span class="changelog-version-tag">v1.0.5</span>
+<span class="changelog-date">April 23</span>
+</div>
+<div class="changelog-content">
+
+### Build System Overhaul
+
+- Switched to Vite for builds with optimized chunking for the major libraries we depend on
+- Brought marked, DOMPurify, and highlight.js in-house instead of loading them from external CDNs
+- Set up automated testing with Vitest and wrote the first round of navigation tests
+- Added continuous integration that runs linting, tests, and builds on every push
+- Configured ESLint and Prettier to keep the codebase consistent and clean
+
+### Privacy & Legal
+
+- Gave the Terms of Service a refresh - simplified the language around user responsibility and trimmed some of the verbose explanations
+- Updated Privacy Policy to accurately reflect what we actually store locally (just bookmarks and recent pages, no theme preference)
+- Did a quick audit of the actual storage and network calls to make sure our privacy claims match reality
+
+### Search Improvements
+
+- Added fuzzy matching to the search so you can find what you're looking for even with typos or partial words
+- Built out CSS styling for platform-specific version tags (Windows, macOS, Linux, Android, iOS, and retired items)
+- Added a direct link to our Discord server in the topbar for anyone who needs help
+
+### Offline Support
+
+- Gave the service worker a full rewrite with smarter caching strategies
+- Pages load faster when you're offline, and the cache is now versioned properly
+
+</div>
+</div>
+
+<div class="changelog-item">
+<div class="changelog-header">
+<span class="changelog-version-tag">v1.0.4</span>
+<span class="changelog-date">April 23</span>
+</div>
+<div class="changelog-content">
+
+### Stratum Framework & PWA Support
+
+- **Service Worker (Offline Support)**: Integrated `sw.js` for PWA offline caching with a cache-first strategy for all assets.
+- **Sidebar Navigation**: Implemented dynamic sidebar with logo, versioning, and collapsible navigation groups (expanded by default).
+- **Topbar Evolution**: Replaced Browse with a dedicated mobile Menu button and removed redundant brand imagery for a cleaner look.
+- **Mobile Experience**: Added swipe gestures, manipulation-optimized touch targets (48px), and smooth elastic scrolling.
+- **CSS Architecture**: Fixed scrolling containers, implemented fixed-position mobile sidebar, and optimized markdown typography for small screens.
+- **JavaScript Core**: Fixed hoisting issues in prefetch logic and improved mobile navigation state management.
+- **Search & Performance**: Preserved keyboard-driven search (Cmd/Ctrl+K) and optimized page loading via fetch() with improved debug logging.
+
+</div>
+</div>
+
+<div class="changelog-item">
+<div class="changelog-header">
 <span class="changelog-version-tag">v1.0.3</span>
 <span class="changelog-date">April 20</span>
 </div>
