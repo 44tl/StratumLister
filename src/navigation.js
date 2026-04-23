@@ -171,6 +171,10 @@ let searchIndex = [];
 let searchIndexPromise = null;
 let navigatorFilters;
 let activeNavigatorGroup = 'all';
+export const getActiveNavigatorGroup = () => activeNavigatorGroup;
+export const setActiveNavigatorGroup = (value) => {
+  activeNavigatorGroup = value;
+};
 
 const getAllPages = () => [
     ...siteStructure.flatMap(group => group.items.map(item => ({
@@ -1303,8 +1307,32 @@ const bootstrap = () => {
     setupBackToTop();
 };
 
-if (document.readyState === 'loading') {
+// Skip auto-bootstrap in test environment
+if (globalThis.TESTING) {
+  // no-op
+} else if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', bootstrap);
 } else {
     bootstrap();
 }
+
+// Export for testing
+export {
+  levenshteinDistance,
+  fuzzyMatch,
+  scoreSearchResult,
+  getSearchTerms,
+  escapeHtml,
+  stripMarkdown,
+  getIconSvg,
+  getAllPages,
+  getGroupedPages,
+  getFilteredPages,
+  getPagesByIds,
+  findItemById,
+  isBookmarked,
+  getStoredBookmarks,
+  saveStoredBookmarks,
+  getRecentPageIds,
+  saveRecentPage
+};
