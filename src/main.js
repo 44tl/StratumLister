@@ -1,6 +1,15 @@
 import { marked, hljs } from './vendor.js';
 import './navigation.js';
 
+// Unregister any legacy service workers to prevent stale content caching
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(registrations => {
+    for (const registration of registrations) {
+      registration.unregister();
+    }
+  });
+}
+
 // Configure marked with custom renderer and highlight.js
 if (marked && hljs) {
   marked.use({

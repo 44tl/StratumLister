@@ -164,6 +164,15 @@ const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 
 const markdownCache = new Map();
 const emptyPages = new Set();
+
+const fetchWithNoCache = (url, options = {}) => {
+  const separator = url.includes('?') ? '&' : '?';
+  return fetch(`${url}${separator}t=${Date.now()}`, {
+    ...options,
+    cache: 'no-cache'
+  });
+};
+
 let searchOverlay;
 let searchInput;
 let searchResults;
@@ -205,7 +214,7 @@ const checkPageAvailability = async () => {
 
     pagesToCheck.forEach(item => {
         checks.push(
-            fetch(item.path)
+            fetchWithNoCache(item.path)
                 .then(response => {
                     if (!response.ok) throw new Error('Not found');
                 })
@@ -552,7 +561,7 @@ const loadContent = async (path, item = null) => {
     if (navLink) navLink.classList.remove('empty');
 
     try {
-        const response = await fetch(path);
+        const response = await fetchWithNoCache(path);
         
         if (!response.ok) {
             throw new Error('Not found');
@@ -997,7 +1006,7 @@ const ensureSearchIndex = async () => {
 
     searchIndexPromise = Promise.all(getAllPages().map(async item => {
         try {
-            const response = await fetch(item.path);
+            const response = await fetchWithNoCache(item.path);
             const markdown = response.ok ? await response.text() : '';
             return {
                 ...item,
@@ -1212,7 +1221,7 @@ const fetchContributors = async () => {
         contributorsAbort.signal = controller.signal;
         setTimeout(() => controller.abort(), 5000);
 
-        const response = await fetch(CONTRIBUTORS_API_URL, { signal: controller.signal });
+        const response = await fetchWithNoCache(CONTRIBUTORS_API_URL, { signal: controller.signal });
 
         if (!response.ok) return [];
 
