@@ -1302,20 +1302,19 @@ const setupBackToTop = () => {
 };
 
 const bootstrap = () => {
-    init();
-    enhanceSearch();
-    setupBackToTop();
+  enhanceSearch();
+  setupBackToTop();
 };
-
+ 
 // Skip auto-bootstrap in test environment
 if (globalThis.TESTING) {
   // no-op
 } else if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bootstrap);
+  document.addEventListener('DOMContentLoaded', bootstrap);
 } else {
-    bootstrap();
+  bootstrap();
 }
-
+ 
 // Export for testing
 export {
   levenshteinDistance,

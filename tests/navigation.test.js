@@ -330,7 +330,6 @@ describe('Recent Pages', () => {
     })
 
     it('should return stored recent pages for valid IDs', () => {
-      // Use correct storage key
       localStorage.setItem('stratum-recent-pages', JSON.stringify(['stratum-lister', 'important']))
       const recent = getRecentPageIds()
       expect(recent).toContain('stratum-lister')

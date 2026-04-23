@@ -1,7 +1,5 @@
-// Mark test environment BEFORE any imports
 globalThis.TESTING = true
 
-// Create minimal DOM structure required by navigation.js
 const createTestDOM = () => {
   document.body.innerHTML = `
     <div id="sidebar-container"></div>
@@ -34,16 +32,11 @@ const createTestDOM = () => {
   `
 }
 
-// Build DOM
 createTestDOM()
 
-// Mock scrollIntoView
 Element.prototype.scrollIntoView = () => {}
-
-// Mock scrollTo
 window.scrollTo = () => {}
 
-// Mock localStorage
 const localStorageMock = (() => {
   let store = {}
   return {
